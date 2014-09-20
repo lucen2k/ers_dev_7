@@ -48,7 +48,13 @@ Array
     [2] => sample
     [3] => data
 )
+', true), '</pre>';
+			?>
 
+			<p>DUMP</p>
+			<?php
+
+echo '<pre>', highlight_string('<?php
 # DUMP表示
 $sample = array(1,22,\'sample\',\'data\');
 dump($sample);
@@ -64,7 +70,13 @@ array(4) {
   [3]=>
   string(4) "data"
 }
+', true), '</pre>';
+			?>
 
+			<p>ERROR</p>
+			<?php
+
+echo '<pre>', highlight_string('<?php
 # ERROR表示
 $sample = \'sample error message..\';
 error($sample);
