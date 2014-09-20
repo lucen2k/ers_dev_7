@@ -1,0 +1,10 @@
+
+<!-- 「ページタイトル」または「項目タイトル」表示 -->
+<h3><?php echo $set->title; ?></h3>
+
+<!-- Table自動表示 -->
+<?php echo $tbl->view($set->list); ?>
+
+<!-- pager -->
+<?php echo $set->pager; ?>
+

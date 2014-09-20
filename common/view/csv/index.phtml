@@ -1,0 +1,25 @@
+
+<!-- CSVファイルのリスト表示 -->
+<h3>CSV File list</h3>
+
+ファイル数：<?php echo $set->csv_file['count']; ?>
+<table class="lucen">
+<?php foreach ($set->csv_file['content'] as $no => $filename): ?>
+    <tr>
+        <td><?php echo $no; ?></td>
+        <td><?php echo $filename; ?></td>
+    </tr>
+<?php endforeach; ?>
+</table>
+
+<!-- CSVファイルの内容表示 -->
+<h3><?php echo $set->csv_file['content'][1]; ?></h3>
+
+行数：<?php echo $set->csv_import['count']; ?>
+<?php echo $tbl->view($set->csv_import['content']); ?>
+
+<!-- CSVダウンロード -->
+<h3>CSV Download</h3>
+<a href="?download_csv=1">Table:list Download</a><br>
+
+
