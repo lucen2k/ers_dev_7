@@ -27,6 +27,7 @@ $released = "September 12, 2014";
 				<li><a href="#table-class">Table Class</a></li>
 				<li><a href="#pager-class">Pager Class</a></li>
 				<li><a href="#csv-class">CSV Class</a></li>
+				<li><a href="#auth-class">Auth Class</a></li>
 			</ul>
 		</div>
 		<div id="right">
@@ -240,6 +241,54 @@ echo '<pre>', highlight_string('<?php
 # CSV出力リンク
 <h3>CSV Download</h3>
 <a href="?download_csv=1">Table:list Download</a><br>
+
+', true), '</pre>';
+			?>
+
+			<h2><a name="auth-class">Auth Class</a></h2>
+			<p>[<a href="/admin/" target="_blank">Sample page</a>]</p>
+			<br>
+			<p>Controller</p>
+			<?php
+echo '<pre>', highlight_string('<?php
+# ログイン後のログインユーザ情報
+debug($auth);
+
+debug::
+Auth Object
+(
+    [userid] => 100
+    [username] => 管理者
+    [email] => admin@email.com
+    [db] => db Object [...]
+
+)
+
+', true), '</pre>';
+			?>
+
+			<?php
+echo '<pre>', highlight_string('<?php
+# Login check: ログイン状態はページ表示、そうじゃない場合はログインページにリダイレクト
+$auth->login_check();
+
+', true), '</pre>';
+			?>
+
+			<p>View</p>
+			<?php
+echo '<pre>', highlight_string('<?php
+# ログインFORM
+
+<h3>Lgoin</h3>
+
+<form action="" method="post">
+	<input type="hidden" name="_method" value="POST"/>
+	<input type="email" name="Login[email]" value="admin@email.com" placeholder="Email" maxlength="64" required="required"/><br/>
+	<input type="password" name="Login[password]" value="pass" placeholder="Password" pattern="[a-zA-Z0-9]+" required="required"/><br/>
+	halfwidth alphabet or digit character<br/>
+	<input  type="submit" value="Send"/>
+</form>
 
 ', true), '</pre>';
 			?>
