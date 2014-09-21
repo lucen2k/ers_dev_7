@@ -1,5 +1,5 @@
 <?php
-include(__DIR__."/../class/class.db.php");
+include(dirname(__FILE__)."/../class/class.db.php");
 $version = "1.0.2";
 $released = "December 9, 2010";
 

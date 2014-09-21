@@ -1,6 +1,6 @@
 <?php
 #- default include
-include(__DIR__.'/../common/config/default.inc.php');
+include(dirname(__FILE__).'/../common/config/default.inc.php');
 
 # logout
 unset($_SESSION['Auth']);

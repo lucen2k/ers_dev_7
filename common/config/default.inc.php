@@ -2,23 +2,23 @@
 session_start();
 
 #- HTML
-include(__DIR__.'/header.inc.php');
+include(dirname(__FILE__).'/header.inc.php');
 
 #- DB Class
-include(__DIR__.'/db.inc.php');
+include(dirname(__FILE__).'/db.inc.php');
 
 #- Table Class
-include(__DIR__.'/../class/class.table.php');
+include(dirname(__FILE__).'/../class/class.table.php');
 $tbl = new Array_View_Table;
 
 #- Pager Class
-include(__DIR__.'/../class/class.pager.php');
+include(dirname(__FILE__).'/../class/class.pager.php');
 
 #- CSV Class
-include(__DIR__.'/../class/class.csv.php');
+include(dirname(__FILE__).'/../class/class.csv.php');
 
 #- Auth Class
-include(__DIR__.'/../class/class.auth.php');
+include(dirname(__FILE__).'/../class/class.auth.php');
 $session_auth = array();
 //debug($_SESSION);
 if (!empty($_SESSION['Auth'])) {
@@ -27,10 +27,10 @@ if (!empty($_SESSION['Auth'])) {
 $auth = new Auth($db, $session_auth);
 
 #- Config
-include(__DIR__.'/config.inc.php');
+include(dirname(__FILE__).'/config.inc.php');
 
 #- define
-define('CSV_PATH',	__DIR__.'/../../csv/');
+define('CSV_PATH',	dirname(__FILE__).'/../../csv/');
 
 #- Debug info
 Class ERS_Dev

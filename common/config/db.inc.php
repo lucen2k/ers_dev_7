@@ -1,7 +1,7 @@
 <?php
 
 #- PDO Wrapper Class
-include_once(__DIR__.'/../class/class.db.php');
+include_once(dirname(__FILE__).'/../class/class.db.php');
 
 #- db info
 define('HOSENAME',	'localhost');
