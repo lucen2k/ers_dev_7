@@ -1,7 +1,7 @@
 body { font : 12px Verdana; font-size: 10pt; color: #666666 }
  
-A:link { color:#333333; text-decoration:none; background:url(dot.gif) repeat-x bottom;}
-A:visited { color:#333333; text-decoration:none; background:url(dot.gif) repeat-x bottom;}
+A:link { color:#333333; text-decoration:none; background:url(Dot.gif) repeat-x bottom;}
+A:visited { color:#333333; text-decoration:none; background:url(Dot.gif) repeat-x bottom;}
 A:active { color:#FF8C00;text-decoration:underline; }
 A:hover { color:#FF8C00;text-decoration:underline; }
  
