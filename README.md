@@ -55,7 +55,7 @@ ERS_Dev Object
 </pre>
 
 # Demo site
-http://ers-japan.com/ers_dev/7/admin/
+<a href="http://ers-japan.com/ers_dev/7/" target="_blank">http://ers-japan.com/ers_dev/7/</a>
 
 #　Version
 
