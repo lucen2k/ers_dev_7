@@ -54,6 +54,8 @@ ERS_Dev Object
             [0] => Array [...]
 </pre>
 
+# Demo site
+http://ers-japan.com/ers_dev/7/admin/
 
 #　Version
 
