@@ -43,6 +43,9 @@ Class ERS_Dev
 }
 $set = new ERS_Dev();
 
+#- include config
+$use = new UseConfig();
+
 #- params
 $params = get_params();
 $set->Params = $params;
@@ -154,3 +157,31 @@ function redirect($url)
 {
 	echo('<script language="JavaScript"> location = "'.HOME_URL.$url.'" </script>');
 }
+
+# include config
+class UseConfig
+{
+	function config($filename)
+	{
+		if (empty($filename)) {
+			error('filename not found.');
+			return false;
+		}
+
+		$filename = dirname(__FILE__).'/'.$filename.'.inc.php';
+		if (!file_exists($filename)) {
+			error('file not found.');
+			return false;
+		}
+
+		# include
+		include($filename);
+
+		return $config;
+	}
+}
+
+
+
+
+

@@ -37,6 +37,11 @@ $fields = array(
 );
 $db->update('list', $fields, 'id = 9');
 
+#- include config
+$test = $use->config('config_sample');
+debug(DEFINE_CONFIG_SAMPLE);
+debug($test['config_sample']);
+
 
 #- View =============================================================
 view('index', $set);
