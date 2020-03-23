@@ -54,10 +54,10 @@ ERS_Dev Object
             [0] => Array [...]
 </pre>
 
-# Demo site
-<a href="http://ers-japan.com/ers_dev/7/" target="_blank">http://ers-japan.com/ers_dev/7/</a>
-
 #　Version
+
+ * ers.dev.v.0.7.1 - 2020.3.23
+ * @author Lucen(8): PHPバージョンアップによる不具合修正
 
  * ers.dev.v.0.7 - 2014.9.20
  * @author Lucen(7): ADMIN page　&　Login機能追加

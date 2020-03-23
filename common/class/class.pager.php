@@ -32,8 +32,9 @@ class Pager extends db
     var $pager;
     var $result;
 
-	function __construct($sql, $length, $getvar='page')
+	function __construct($mysqli, $sql, $length, $getvar='page')
 	{
+		$this->mysqli = $mysqli;
 		$this->result=null;
 		$this->sql = $sql;
 		$this->query = $sql;
@@ -61,10 +62,10 @@ class Pager extends db
 		$sql = trim($this->sql);
 		$sql = substr($sql,6);
 		$sql = 'SELECT SQL_CALC_FOUND_ROWS '.$sql.' limit '.$this->start.', '.$this->length;
-		$this->result = mysql_query($sql);
+		$this->result = $this->mysqli->query($sql);
 		$sql = "SELECT FOUND_ROWS()";
-		$result = mysql_query($sql);
-		$this->rows = mysql_result($result,0);
+		$result = $this->mysqli->query($sql);
+		$this->rows = mysqli_num_rows($result);
 	}
 
   	//getvar_val() gets the

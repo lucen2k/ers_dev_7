@@ -35,9 +35,9 @@ define('CSV_PATH',	dirname(__FILE__).'/../../csv/');
 #- Debug info
 Class ERS_Dev
 {
-   public $version 		= "ers.dev.v.0.7";
-   public $date 		= "2014.09.20";
-   public $author 		= "Lucen(7),Wataru(0)";
+   public $version 		= "ers.dev.v.0.7.1";
+   public $date 		= "2020.03.23";
+   public $author 		= "Lucen(8)";
    public $db_class 	= "<a href='/common/doc/class.db.php' target='_blank'>DB Class Discription</a>";
    public $other_class 	= "<a href='/common/doc/class.other.php' target='_blank'>Other Class Discription</a>";
 }
